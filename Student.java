@@ -1,5 +1,6 @@
+package studentmanagement;
+
 public class Student {
-  // Student attributes
   private String id;
   private String name;
   private String birthdate;
