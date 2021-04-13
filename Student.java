@@ -1,15 +1,15 @@
 public class Student {
   // Student attributes
-  private int id;
+  private String id;
   private String name;
   private String birthdate;
 
   // Student methods
-  public int getID() {
+  public String getID() {
     return id;
   }
 
-  public void setID(int studentID) {
+  public void setID(String studentID) {
     this.id = studentID;
   }
 
@@ -34,14 +34,14 @@ public class Student {
   }
 
   // Student Constructor
-  public Student(int studentID, String studentName, String studentBirthdate) {
+  public Student(String studentID, String studentName, String studentBirthdate) {
     this.id = studentID;
     this.name = studentName;
     this.birthdate = studentBirthdate;
   }
 
   public static void main(String args[]) {
-    Student stu1 = new Student(123, "Quan", "22/08/1995");
+    Student stu1 = new Student("S123", "Quan", "22/08/1995");
 
     System.out.println(stu1.getInfo());
   }
