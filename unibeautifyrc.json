@@ -1,0 +1,7 @@
+{
+  "Java": {
+    "beautifiers": [
+      "Pretty Diff"
+    ]
+  }
+}
