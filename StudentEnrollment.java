@@ -1,7 +1,3 @@
-package studentmanagement;
-import studentmanagement.Course;
-import studentmanagement.Student;
-
 public class StudentEnrollment {
   private Student student;
   private Course course;

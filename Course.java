@@ -1,5 +1,3 @@
-package studentmanagement;
-
 public class Course {
   // Student attributes
   private String id;
