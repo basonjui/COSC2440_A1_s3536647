@@ -2,7 +2,7 @@ import java.util.*;
 
 public final class Application {
   public static void main(String args[]) {
-    ArrayList<StudentEnrollment> studentEnrollmentList = new ArrayList<StudentEnrollment>();
+    ArrayList<StudentEnrollment> studentEnrollmentList = new ArrayList<StudentEnrollment> ();
 
     // TODO: Interface to ask whether Users want to populate file
     // If no file specified: use students.csv
@@ -63,5 +63,26 @@ public final class Application {
 				System.out.println("Invalid input! Please try again with options 1 to 6.");
 			}
 		}
+  }
+
+  // TODO: studentEnrollmentList methods: get student by ID
+  public static void Add(ArrayList<StudentEnrollment> studentEnrollmentList) {
+
+  }
+
+  public static void Update(ArrayList<StudentEnrollment> studentEnrollmentList) {
+
+  }
+
+  public static void Delete(ArrayList<StudentEnrollment> studentEnrollmentList) {
+
+  }
+
+  public static void GetOne(ArrayList<StudentEnrollment> studentEnrollmentList) {
+
+  }
+
+  public static void GetAll(ArrayList<StudentEnrollment> studentEnrollmentList) {
+
   }
 }

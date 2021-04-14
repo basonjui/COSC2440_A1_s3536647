@@ -19,10 +19,10 @@ public class StudentEnrollment implements StudentEnrollmentManager{
     System.out.println(this.student.getName() + ", " + this.course.getName() + ", " + semester);
   }
 
+  // Enrollment CRUD
   public final void addEnrollment() {
     // User input variables
-    Student student = new Student();
-    Course course = new Course();
+    String semesterInput;
 
     System.out.println("Add something");
     StudentEnrollment anEnrollment = new StudentEnrollment();
