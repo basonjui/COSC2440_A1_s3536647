@@ -1,48 +1,42 @@
-public class Student {
+final public class Student {
   private String id;
   private String name;
   private String birthdate;
 
   // Student methods
-  public String getID() {
+  final public String getID() {
     return id;
   }
 
-  public void setID(String studentID) {
-    this.id = studentID;
+  final public void setID(String id) {
+    this.id = id;
   }
 
-  public String getName() {
+  final public String getName() {
     return name;
   }
 
-  public void setName(String studentName) {
-    this.name = studentName;
+  final public void setName(String name) {
+    this.name = name;
   }
 
-  public String getBirthdate() {
+  final public String getBirthdate() {
     return birthdate;
   }
 
-  public void setBirthdate(String studentBirthdate) {
-    this.birthdate = studentBirthdate;
+  final public void setBirthdate(String birthdate) {
+    this.birthdate = birthdate;
   }
 
-  public String getInfo() {
-    return this.id + " " + this.name + " " + this.birthdate;
+  final public void getStudentInfo() {
+    System.out.println(this.id + ", " + this.name + ", " + this.birthdate);
   }
 
   // Student Constructor
-  public Student(String studentID, String studentName, String studentBirthdate) {
-    this.id = studentID;
-    this.name = studentName;
-    this.birthdate = studentBirthdate;
-  }
-
-  public static void main(String args[]) {
-    Student stu1 = new Student("S123", "Quan", "22/08/1995");
-
-    System.out.println(stu1.getInfo());
+  public Student(String id, String name, String birthdate) {
+    this.id = id;
+    this.name = name;
+    this.birthdate = birthdate;
   }
 
 }
