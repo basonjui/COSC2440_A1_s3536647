@@ -12,28 +12,35 @@ public class StudentEnrollment implements StudentEnrollmentManager{
     this.semester = semester;
   }
 
+  public StudentEnrollment() {}
+
   // methods
   public final void getEnrollmentInfo() {
     System.out.println(this.student.getName() + ", " + this.course.getName() + ", " + semester);
   }
 
-  public final void add() {
+  public final void addEnrollment() {
+    // User input variables
+    Student student = new Student();
+    Course course = new Course();
+
     System.out.println("Add something");
+    StudentEnrollment anEnrollment = new StudentEnrollment();
   }
 
-  public final void update() {
+  public final void updateEnrollment() {
     System.out.println("Update something");
   }
 
-  public final void delete() {
+  public final void deleteEnrollment() {
     System.out.println("Delete something");
   }
 
-  public final void getOne() {
+  public final void getOneEnrollment() {
     System.out.println("GetOne something");
   }
 
-  public final void getAll() {
+  public final void getAllEnrollments() {
     System.out.println("GetAll something");
   }
 

@@ -1,4 +1,4 @@
-final public class Course {
+public class Course {
   // Student attributes
   private String id;
   private String name;
@@ -39,5 +39,7 @@ final public class Course {
     this.name = name;
     this.credits = credits;
   }
+
+  public Course() {}
 
 }

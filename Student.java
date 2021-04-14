@@ -1,4 +1,4 @@
-final public class Student {
+public class Student {
   private String id;
   private String name;
   private String birthdate;
@@ -38,5 +38,7 @@ final public class Student {
     this.name = name;
     this.birthdate = birthdate;
   }
+
+  public Student() {}
 
 }

@@ -1,7 +1,7 @@
 interface StudentEnrollmentManager {
-  void add();
-  void update();
-  void delete();
-  void getOne();
-  void getAll();
+  void addEnrollment();
+  void updateEnrollment();
+  void deleteEnrollment();
+  void getOneEnrollment();
+  void getAllEnrollments();
 }
