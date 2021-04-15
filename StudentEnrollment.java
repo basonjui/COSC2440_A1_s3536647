@@ -14,4 +14,16 @@ public StudentEnrollment(Student student, Course course, String semester) {
 
 public StudentEnrollment() {
 }
+
+// Methods
+
+public String getStudentID() {
+    return this.student.getID();
+}
+
+
+public void getEnrollmentInfo() {
+    this.student.getStudentInfo();
+    this.course.getCourseInfo();
+}
 }

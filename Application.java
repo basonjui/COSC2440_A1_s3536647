@@ -1,4 +1,7 @@
 import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Application {
 public static void main(String args[]) {
@@ -6,27 +9,46 @@ public static void main(String args[]) {
 
         // TODO: Interface to ask whether Users want to populate file
         // If no file specified: use students.csv
-        int importChoice = 0;
+        int importChoice;
 
         System.out.println("--- Welcome to the Student Enrollment Management System ---");
 
-        boolean importLoop = false;
-        while (!importLoop) {
+        boolean fileImported = false;
+        while (!fileImported) {
             System.out.print("Would you like to import a Student Enrollment List? 0 = No, 1 = Yes: ");
 
             Scanner sc = new Scanner(System.in);
             importChoice = sc.nextInt();
 
             switch (importChoice) {
-                case 0: {
-                    System.out.println("Enter your file path: ");
-                    importLoop = true;
+                case 1: {
+                    Scanner filepathScanner = new Scanner(System.in);
+                    System.out.print("Enter your file path: ");
+                    String filepath = filepathScanner.nextLine();
+
+                    try {
+                        // Read File
+                        File userFile = new File(filepath);
+                        Scanner fileReader = new Scanner(userFile);
+                        if (userFile.exists()) {
+                            System.out.println("Found file " + userFile.getName());
+                        }
+                        fileImported = true;
+
+                        fileReader.close();
+
+                    } catch (FileNotFoundException e) {
+                        System.out.println("An error has occured.");
+                        e.printStackTrace();
+                        System.out.println("Please try again!");
+                    }
+
                     break;
                 }
 
-                case 1: {
+                case 0: {
                     System.out.println("Loading default file: students.csv..");
-                    importLoop = true;
+                    fileImported = true;
                     break;
                 }
 
@@ -35,11 +57,6 @@ public static void main(String args[]) {
                 }
             }
         }
-
-
-
-        // TODO: Populate Students and Courses list from students.csv
-
 
         // Loop User Interface
         while (true) {
@@ -115,11 +132,22 @@ public static void addEnrollment(ArrayList<StudentEnrollment> studentEnrollmentL
 
         studentEnrollmentList.add(new StudentEnrollment(student, course, semester));
 
-        System.out.println(studentEnrollmentList.get(0));
+        studentEnrollmentList.get(0).getEnrollmentInfo();
 }
 
 public static void updateEnrollment(ArrayList<StudentEnrollment> studentEnrollmentList) {
-    System.out.println("Overriding");
+    System.out.print("Enter student ID: ");
+    Scanner sc = new Scanner(System.in);
+    String studentID = sc.next();
+    // Get student obj
+    System.out.println("");
+
+    for (int counter = 0; counter < studentEnrollmentList.size(); counter++) {
+        if (studentID == studentEnrollmentList.get(counter).getStudentID()) {
+            System.out.println("Found student");
+        }
+    }
+
 }
 
 public static void deleteEnrollment(ArrayList<StudentEnrollment> studentEnrollmentList) {
