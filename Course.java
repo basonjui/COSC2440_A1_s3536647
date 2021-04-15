@@ -1,4 +1,4 @@
-public class Course {
+final public class Course {
 // Student attributes
 private String id;
 private String name;
